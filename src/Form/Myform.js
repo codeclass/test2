@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Form, Button, Row, Col, Table} from 'react-bootstrap'
+import InputMask from 'react-input-mask';
 
 export const Myform = () => {
 
@@ -69,8 +70,9 @@ export const Myform = () => {
                 <Form.Control.Feedback type="invalid" className="m-2">
                     {form.adresserror}
                 </Form.Control.Feedback>
-                <Form.Control
-                    className="phone-input m-2"
+                <InputMask
+                    mask="+7 999 999 99 99"
+                    className="form-control phone-input m-2"
                     type="text"
                     placeholder="Телефон"
                     name="phone"
